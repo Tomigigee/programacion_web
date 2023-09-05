@@ -1,0 +1,99 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+    background-image: url("C:/Users/fgige/Desktop/programacion_web/practicas/tarea_4/Diseño sin título.png");
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo */
+}
+
+.nombre{
+    margin: 5px;
+    border: solid black;
+}
+
+.select{
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    background-color: beige;
+    border: solid black 2px;
+    margin-top: -130px;
+}
+
+legend{
+    background-color: lightblue;;
+    color: black; 
+    border-radius: 50px; 
+    font-size: 25px;
+    text-align: center;
+    border: solid black 2px;
+}
+
+label{
+    margin: 20px;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(205, 165, 97);
+}
+
+.fieldset{
+    margin: 10px;
+    background-color: rgb(205, 165, 97);
+    border: solid black 2px;
+}
+
+.pedir{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(11, 225, 39);
+    font-weight: bolder;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 50px;
+    border: solid black 2px;
+}
+
+.pedir:hover{
+    background-color: #8dede5;
+    transition: background-color 0.4s;
+}
+
+.volver{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: lightblue;
+    font-weight: bolder;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-right: 47%;
+    margin-left: 47%;
+    font-size: 15px;
+    text-decoration: none;
+    border: solid black 2px;
+}
+
+.volver:hover{
+    background-color: #8dede5;
+    transition: background-color 0.4s;
+
+}
+
+.box{
+    margin-left: -1350px;
+    margin-top: 0px;
+    text-align: center;
+
+
+}

@@ -1,0 +1,58 @@
+body{
+    font-family: 'Raleway', sans-serif;
+    background-color: beige;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.cafe {
+    flex: 1; 
+    text-align: center; 
+    padding-right: 20px;
+}
+
+.snacks {
+    flex: 1; 
+    text-align: center; 
+    padding-left: 20px; 
+}
+
+.en_un_click{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(11, 225, 39);
+    font-weight: bolder;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.en_un_click:hover{
+    background-color: aquamarine;
+    transition: background-color 0.4s;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    position: relative
+    ;background-color: transparent
+    ;margin-top: -50px
+    ;margin-left: 890px
+    ;display: flex;
+}

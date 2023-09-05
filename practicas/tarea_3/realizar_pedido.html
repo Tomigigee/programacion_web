@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\fgige\Desktop\programacion_web\practicas\tarea_3\realizar_pedido3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Raleway&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+            hola
+        </div>
+        <br>
+        <form action="tablapractica.html" method="get" class="select">
+            Nombre completo:   <input type="text" name="NOMBRE" placeholder="ingrese su nombre y apellido" required><br><br>
+            Empresa:   <input type="text" name="empresa" placeholder="ingrese la empresa" required><br><br>
+            Direccion:   <input type="text" name="dire" placeholder="ingrese su direccion" required><br>
+            <fieldset class="fieldset">
+                <legend >Cuales llevaras?</legend>
+                <label> Expreso <input type="number" ></label><br><br>
+                <label> Doble <input type="number" ></label><br><br>
+                <label> Flash <input type="number" ></label><br><br>
+                <label> Mocha <input type="number" ></label><br><br>
+                <label> Capuccino <input type="number" ></label><br><br>
+            </fieldset>
+            <br>
+            Algun snack? 
+            <select name="snacks" id="">
+                <option value="brownie">Brownie de chocolate</option>
+                <option value="alfajor">Alfajor de dulce de leche</option>
+                <option value="scon" selected>Scon de queso</option>
+                <option value="coquito" selected>Coquito</option>
+                <option value="nada" selected>Ningun snack</option>
+
+            </select>
+            <br> <br>
+            Cupon de descuento: <input type="text" placeholder="_ _ _ - _ _ _" maxlength="6"><br><br>
+
+            <a class="pedir" href="C:\Users\fgige\Desktop\programacion_web\practicas\tarea_3\pedido_realizado.html">PEDIR</a>
+
+        </form>
+    </div>
+
+</body>
+</html>

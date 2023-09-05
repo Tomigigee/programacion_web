@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\fgige\Desktop\programacion_web\practicas\tarea_4\realizar_pedido4.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+            <a href="C:\Users\fgige\Desktop\programacion_web\practicas\tarea_4\home4.html" class="volver">Volver al menu</a>
+        </div>
+        <br>
+        <form action="tablapractica.html" method="get" class="select">
+            Nombre completo:   <input type="text" name="NOMBRE" placeholder="ingrese su nombre y apellido" required><br><br>
+            Empresa:   <input type="text" name="empresa" placeholder="ingrese la empresa" required><br><br>
+            Direccion:   <input type="text" name="dire" placeholder="ingrese su direccion" required><br>
+            <fieldset class="fieldset">
+                <legend >Cuales llevaras?</legend>
+                <label> Expreso <input type="number" > $100</label><br><br>
+                <label> Doble <input type="number" >$150</label><br><br>
+                <label> Flash <input type="number" >$170</label><br><br>
+                <label> Mocha <input type="number" >$170</label><br><br>
+                <label> Capuccino <input type="number" >$180</label><br><br>
+            </fieldset>
+        
+            Algun snack? 
+            <select name="snacks" id="">
+                <option value="brownie">Brownie de chocolate $70</option>
+                <option value="alfajor">Alfajor de dulce de leche $50</option>
+                <option value="scon" selected>Scon de queso $60</option>
+                <option value="coquito" selected>Coquito $40</option>
+                <option value="nada" selected>Ningun snack $0</option>
+
+            </select>
+            <br><br>
+            Cupon de descuento: <input type="text" placeholder="_ _ _ - _ _ _" maxlength="6"><br><br>
+
+            <a class="pedir" href="C:\Users\fgige\Desktop\programacion_web\practicas\tarea_4\pedido_realizado4.html">PEDIR</a>
+
+        </form>
+    </div>
+
+</body>
+</html>
