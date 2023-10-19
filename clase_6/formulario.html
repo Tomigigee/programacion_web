@@ -1,0 +1,88 @@
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>dias</title>
+</head>
+<body>
+	
+
+
+
+
+	<script>
+		function calcular(dias,importe,tipo)
+		{
+			var i_resultado=0;
+			var vip=0;
+			var resultado_final=0;
+			if (dias<=300)
+			{
+				i_resultado=(importe*30)/100;
+			}
+			if(dias>300)
+			{
+				i_resultado=(importe*50)/100;
+			}
+	
+			switch(tipo)
+			{
+				case 1:vip=(importe*20)/100;
+				break;
+				case 2:vip=(importe*30)/100;
+				break;
+				case 3:vip=0;
+		}
+			
+			resultado_final=i_resultado - vip + parseInt(importe);
+			console.log(resultado_final);
+			alert("su deuda es:" + resultado_final);
+		}
+	
+		function validar_d(t)
+		{
+			if (t<=0)
+			 {
+		  // t.focus()
+				  alert("debe ingresar un valor")
+			}
+		}	
+	
+		function validar_i (i)
+		{
+			if (i<1)
+			{
+				alert("Importe debe ser mayor a 1")
+			}
+			if (i>1000)
+			{
+				alert("Importe debe ser menor a 1000")
+			}	
+		}
+	
+	</script>
+
+
+
+
+
+<form name="formulario" method="POST" action="">
+ <p align="center"><b><font size="6" color="#0000FF">Ca</font></b><b><font size="6" color="#0000FF">lculo
+  de mora</font></b></p>
+  <p>&nbsp;</p>
+  <p><b>días</b>: <input type="text" name="dias_txt" size="20" onchange="validar_d(dias_txt.value)">  &nbsp;</p>
+  <p><b>  importe</b>: <input type="text" name="importe_txt" size="20" onblur="validar_i(importe_txt.value)">  &nbsp;</p>
+  <p>&nbsp;</p>
+  <p><b><font color="#000099"><u><i>Tipo cliente</i></u></font></b></p>
+  <p><input type="radio" name="R1" value="1" onclick="opcion=1">Vip</p>
+  <p><input type="radio" name="R1" value="2" onclick="opcion=2">Regular</p>
+  <p><input type="radio" name="R1" value="3" onclick="opcion=3">No Vip</p>
+  <p><input type="button" value="Calcular" name="B1" onclick="calcular(dias_txt.value,importe_txt.value,opcion)">
+  <input type="reset" value="Borrar" name="B2"></p>
+</form>
+
+
+
+
+
+</body></html>

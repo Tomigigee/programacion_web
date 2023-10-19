@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<script>
+    console.log("iniciando");
+    let dato = obtenerDatoSincronico();
+    console.log("dato: ", dato)
+    console.log("finalizado");
+    
+    function obtenerDatoSincronico(){
+        setTimeout(()=>console.log("dato: ", "Jorge"), 1000);
+
+    }
+
+    
+
+    const finalizar = () => console.log("fin de la funcion");
+    saludar(finalizar);
+
+    function saludar(f){
+        console.log("hola a todos");
+        f();
+    }
+
+    // callback:
+    saludar(() => console.log("fiN DE LA FUNCION"));
+
+    function saludar(f){
+        console.log("hola a todos");
+        f();
+    }
+
+    //callback otro ejemplo:
+    saludar((nombre) => console.log(`hola ${nombre}!`));
+
+    function saludar(f){
+        console.log("comienzo de la funcion...");
+        let nombre = 'Pepe';
+        f(nombre);
+    }
+
+    axios.get("https:/jsonplaceholder.typicode.com/users")
+    .then(resp=>console.log(resp))
+    .catch(e=> console.log("Error!!!", e));
+    </script>
+<body>
+    <span></span>
+    <script>
+    axios.get("https:/jsonplaceholder.typicode.com/users")
+    .then(resp=>console.log(resp))
+    .catch(e=> console.log("Error!!!", e));
+    </script>
+</body>
+</html>

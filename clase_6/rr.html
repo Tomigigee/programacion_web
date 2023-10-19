@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página con Modo Nocturno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #fff; /* Color de fondo en modo claro */
+            color: #333; /* Color de texto en modo claro */
+        }
+
+        .modo-nocturno body {
+            background-color: #222; /* Color de fondo en modo nocturno */
+            color: #fff; /* Color de texto en modo nocturno */
+        }
+
+        header {
+            background-color: #333; /* Color de fondo de encabezado en modo claro */
+            color: white; /* Color de texto de encabezado en modo claro */
+            padding: 10px;
+        }
+
+        .modo-nocturno header {
+            background-color: #111; /* Color de fondo de encabezado en modo nocturno */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Página Web</h1>
+        <button id="modoNocturno">Modo Nocturno</button>
+    </header>
+    <main>
+        <p>Bienvenido a mi página web. Esta es una página de ejemplo con un modo claro y modo nocturno.</p>
+        <img src="imagen.jpg" alt="Imagen de ejemplo">
+    </main>
+    <script>
+        const modoNocturnoBtn = document.getElementById('modoNocturno');
+        const body = document.body;
+
+        modoNocturnoBtn.addEventListener('click', () => {
+            body.classList.toggle('modo-nocturno');
+        });
+    </script>
+</body>
+</html>

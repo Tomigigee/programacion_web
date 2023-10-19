@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="formulario">
+        <input type="text" name="" id=""><br>
+        <input type="number" name="" id="0"><br>
+        <input type="submit" value="Validar">
+    </form>
+</body>
+
+<script>
+    let formulario = document.getElementById("formulario")
+    formulario.addEventListener("submit", validarFormulario)
+    
+    function validarFormulario(e){
+        e.preventDefault();
+        alert("Formulario validandose...");
+    }
+</script>
+</html>

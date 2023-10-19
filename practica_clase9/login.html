@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        .table-form {
+            margin: 0 auto;
+            width: 300px;
+        }
+        .form-container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .table-form th, .table-form td {
+            border: none;
+            padding: 10px;
+        }
+        .tareaRealizada {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <!-- Vue.js component -->
+    <div class="container">
+        <div id="logInApp">
+            <h1>{{ nameApp }}</h1>
+            
+            <div class="form-container">
+                <form v-on:submit.prevent="comprobarUsuario">
+                    <table class="table-form">
+                        <tr>
+                            <th>Username:</th>
+                            <td><input type="text" v-model="usuarioIngresado.nombreusuario" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <th>Password:</th>
+                            <td><input type="password" v-model="usuarioIngresado.contrasenia" class="form-control"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Log In" class="btn btn-block btn-success"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <br>
+        </div>
+        <!-- Your iframes here -->
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+        let logInApp = Vue.createApp({
+            data: function(){
+                return {
+                    nameApp: 'Login',
+                    usuarioIngresado: {
+                        nombreusuario: '',
+                        contrasenia: ''
+                    },
+                    usuarios: [
+                        {
+                            nombreusuario: 'ale',
+                            contrasenia: '1234'
+                        },
+                        {
+                            nombreusuario: 'mario',
+                            contrasenia: '2312'
+                        },
+                        {
+                            nombreusuario: 'juan',
+                            contrasenia: '2222'
+                        }
+                    ]
+                }
+            },
+            methods: {
+                comprobarUsuario: function(e) {
+                    e.preventDefault();
+                    const usuarioEncontrado = this.usuarios.find(usuario => usuario.nombreusuario === this.usuarioIngresado.nombreusuario && usuario.contrasenia === this.usuarioIngresado.contrasenia);
+                    if (usuarioEncontrado) {
+                        alert('Usuario válido');
+                    } else {
+                        alert('Usuario no válido');
+                    }
+                }
+            }
+        });
+        logInApp.mount('#logInApp');
+    </script>
+</body>
+</html>

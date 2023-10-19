@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="nombreApellido"></div>
+    <script>
+        var nombre = "Tomas"
+        var apellido = "Gigena"
+        var elementoNombre = document.getElementById('nombreApellido');
+        var texto = "Hola, me llamo " + nombre + " " + apellido;
+        elementoNombre.textContent = nombre + apellido;
+
+        var edad = 17;
+        if (edad >= 18) {
+            console.log("es mayor de edad")
+        } else {
+            console.log("es menor de edad")
+        }
+
+        monto = 50
+        while(monto < 1000) {
+            console.log(monto)
+            monto += 300
+        }
+
+        /* function suma(n1,n2){
+            let resultado = n1 + n2
+            return resultado
+        }
+        */
+
+        let suma = (a,b) => a+b 
+        console.log(suma(2,4))
+
+        alert("la suma dio: " + suma(2,4))
+
+        let dinero = prompt("ingrese su cuota")
+        alert ("la suma de cuotas dio: " + dinero * 2)
+
+        //let nombre = prompt("ingrese su nombre"){
+            
+        
+    </script>
+</body>
+</html>
